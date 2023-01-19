@@ -1,0 +1,21 @@
+{% extends 'base.html'%}
+
+{% block title %}
+CarS
+{% endblock  %}
+
+{% block content %}
+<h1>car page</h1>
+<div class="container text-center">
+{% for d in car %}
+
+<div class="card text-center" style="width: 18rem; display:inline-block">
+<img src="{{d.car_img.url}}" class="card-img-top" alt="...">
+<div class="card-body">
+<h5 class="card-title">{{d.car_name}}</h5>
+<p class="card-text">{{d.car_ty}}</p>
+</div>
+</div>
+{% endfor %}
+</div>
+{% endblock  %}
